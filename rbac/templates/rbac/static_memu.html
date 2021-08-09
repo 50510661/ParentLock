@@ -1,0 +1,10 @@
+<ul class="nav nav-sidebar">
+    {% for item in memu_list %}
+        {% if request.path_info == item.url %}
+            <li class="active"><a href="{{ item.url }}">{{ item.title }} <span class="sr-only">(current)</span></a></li>
+        {% else %}
+            <li class=""><a href="{{ item.url }}">{{ item.title }} <span class="sr-only">(current)</span></a></li>
+        {% endif %}
+
+    {% endfor %}
+</ul>

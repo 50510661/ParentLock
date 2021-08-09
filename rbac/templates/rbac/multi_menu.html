@@ -1,0 +1,13 @@
+<div  class="multi-menu">
+    {% for item in menu_dict.values %}
+         <div class="item">
+          <div class="title"><span class="icon-wrap"><i class="fa {{ item.icon }}"></i></span> {{ item.title }}</div>
+            <div class="body {{ item.class }}">
+                {% for per in item.chidren %}
+                    <p><a class="{{ per.class }} {{per.icon}}" href="{{ per.url }}">{{ per.title }}</a></p>
+                {% endfor %}
+            </div>
+         </div>
+{% endfor %}
+         </div>
+
