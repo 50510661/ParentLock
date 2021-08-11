@@ -18,5 +18,6 @@ from django.urls import path,re_path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path('client_v1',include('pc_client_Interface_v1.urls'),name='pc_v1')
+    re_path('client_v1',include('pc_client_Interface_v1.urls'),name='pc_v1'),#app PC接口
+    re_path('logoin',include('logoin.urls'),name='logoin'),#web登录页面
 ]
